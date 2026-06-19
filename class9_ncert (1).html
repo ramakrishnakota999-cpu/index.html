@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class 9 NCERT Books 2026–27</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0f1117; --bg2: #181c27; --bg3: #1e2333;
+    --border: rgba(255,255,255,0.08); --text: #f0f2f8; --muted: #8b92a9;
+    --accent: #6c63ff; --accent2: #a78bfa;
+    --tag-bg: rgba(108,99,255,0.15); --tag-text: #a78bfa;
+  }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  header {
+    padding: 3rem 2rem 2rem; text-align: center;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #1a1633 0%, var(--bg) 100%);
+  }
+  .eyebrow {
+    display: inline-block; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent2); background: var(--tag-bg);
+    padding: 4px 12px; border-radius: 20px; margin-bottom: 1rem;
+    border: 1px solid rgba(167,139,250,0.2);
+  }
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.1;
+    background: linear-gradient(135deg, #fff 30%, var(--accent2) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-bottom: 0.75rem;
+  }
+  .subtitle { color: var(--muted); font-size: 1rem; max-width: 480px; margin: 0 auto 1.5rem; line-height: 1.6; }
+  .filter-bar {
+    display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+    padding: 1.5rem 2rem; border-bottom: 1px solid var(--border);
+    background: var(--bg2); position: sticky; top: 0; z-index: 10;
+  }
+  .filter-btn {
+    cursor: pointer; background: transparent; border: 1px solid var(--border);
+    color: var(--muted); font-size: 13px; font-family: 'Inter', sans-serif;
+    padding: 6px 14px; border-radius: 20px; transition: all 0.15s;
+  }
+  .filter-btn:hover { border-color: var(--accent2); color: var(--accent2); }
+  .filter-btn.active { background: var(--tag-bg); border-color: var(--accent2); color: var(--accent2); font-weight: 500; }
+  main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .subject-block { margin-bottom: 3rem; }
+  .subject-header {
+    display: flex; align-items: center; gap: 12px;
+    margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border);
+  }
+  .subject-icon {
+    width: 36px; height: 36px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0;
+  }
+  .subject-name { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--text); }
+  .subject-count { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .new-badge {
+    display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
+    text-transform: uppercase; background: rgba(16,185,129,0.15); color: #34d399;
+    border: 1px solid rgba(52,211,153,0.3); padding: 2px 8px; border-radius: 20px; margin-left: 8px;
+    vertical-align: middle;
+  }
+  .books-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .book-card {
+    background: var(--bg2); border: 1px solid var(--border); border-radius: 12px;
+    padding: 1rem 1.1rem; text-decoration: none; color: inherit;
+    transition: all 0.15s; display: flex; flex-direction: column; gap: 6px;
+  }
+  .book-card:hover { border-color: var(--accent); background: var(--bg3); transform: translateY(-2px); }
+  .book-title { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.4; }
+  .book-meta { font-size: 12px; color: var(--muted); }
+  .book-tag {
+    display: inline-block; font-size: 11px; color: var(--tag-text);
+    background: var(--tag-bg); border-radius: 4px; padding: 2px 7px; margin-top: 4px; align-self: flex-start;
+  }
+  .book-tag.verified { background: rgba(16,185,129,0.12); color: #34d399; }
+  .download-row {
+    display: flex; align-items: center; gap: 6px; margin-top: 6px;
+    font-size: 12px; color: var(--accent2); font-weight: 500;
+  }
+  .download-row svg { width: 13px; height: 13px; flex-shrink: 0; }
+  .ncert-note {
+    text-align: center; color: var(--muted); font-size: 13px;
+    margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);
+  }
+  .ncert-note a { color: var(--accent2); text-decoration: none; }
+  .ncert-note a:hover { text-decoration: underline; }
+  @media (max-width: 600px) { .books-grid { grid-template-columns: 1fr 1fr; } h1 { font-size: 1.8rem; } }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="eyebrow">CBSE · Class 9 · New NCERT 2026–27</span>
+  <h1>Your Textbook Library</h1>
+  <p class="subtitle">All new NCERT books for Class 9 — completely revised under NEP 2020. All links go directly to the official NCERT website.</p>
+</header>
+
+<div class="filter-bar">
+  <button class="filter-btn active" data-filter="all">All Subjects</button>
+  <button class="filter-btn" data-filter="mathematics">Mathematics</button>
+  <button class="filter-btn" data-filter="science">Science</button>
+  <button class="filter-btn" data-filter="social">Social Science</button>
+  <button class="filter-btn" data-filter="english">English</button>
+  <button class="filter-btn" data-filter="hindi">Hindi</button>
+  <button class="filter-btn" data-filter="sanskrit">Sanskrit</button>
+</div>
+
+<main id="main">
+
+  <!-- Mathematics — Ganita Manjari -->
+  <div class="subject-block" data-subject="mathematics">
+    <div class="subject-header">
+      <div class="subject-icon" style="background:rgba(99,102,241,0.15);">📐</div>
+      <div>
+        <div class="subject-name">Mathematics <span class="new-badge">New</span></div>
+        <div class="subject-count">Ganita Manjari (गणित मंजरी) · 8 redesigned chapters</div>
+      </div>
+    </div>
+    <div class="books-grid">
+      <a class="book-card" href="https://ncert.nic.in/textbook/pdf/iemh1ps.pdf" target="_blank">
+        <span class="book-title">Ganita Manjari Part 1 (English)</span>
+        <span class="book-meta">Direct PDF from NCERT</span>
+        <span class="book-tag verified">✓ Verified link</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg> Open PDF</div>
+      </a>
+      <a class="book-card" href="https://ncert.nic.in/textbook/pdf/iemh2ps.pdf" target="_blank">
+        <span class="book-title">Ganita Manjari Part 2 (English)</span>
+        <span class="book-meta">Direct PDF from NCERT</span>
+        <span class="book-tag">ncert.nic.in</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg> Open PDF</div>
+      </a>
+      <a class="book-card" href="https://ncert.nic.in/textbook.php" target="_blank">
+        <span class="book-title">All chapters on NCERT site</span>
+        <span class="book-meta">Select Class 9 → Mathematics</span>
+        <span class="book-tag verified">✓ Official NCERT</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6m4-3h6v6m-11 5L21 3"/></svg> Open site</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Science — Exploration -->
+  <div class="subject-block" data-subject="science">
+    <div class="subject-header">
+      <div class="subject-icon" style="background:rgba(16,185,129,0.12);">🔬</div>
+      <div>
+        <div class="subject-name">Science <span class="new-badge">New</span></div>
+        <div class="subject-count">Exploration · Physics, Chemistry & Biology in one volume</div>
+      </div>
+    </div>
+    <div class="books-grid">
+      <a class="book-card" href="https://ncert.nic.in/textbook/pdf/iesc1ps.pdf" target="_blank">
+        <span class="book-title">Exploration (English Medium)</span>
+        <span class="book-meta">Direct PDF from NCERT</span>
+        <span class="book-tag">ncert.nic.in</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg> Open PDF</div>
+      </a>
+      <a class="book-card" href="https://ncert.nic.in/textbook/pdf/ihsc1ps.pdf" target="_blank">
+        <span class="book-title">अन्वेषण (Hindi Medium)</span>
+        <span class="book-meta">Direct PDF from NCERT</span>
+        <span class="book-tag">ncert.nic.in</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg> Open PDF</div>
+      </a>
+      <a class="book-card" href="https://ncert.nic.in/textbook.php" target="_blank">
+        <span class="book-title">All chapters on NCERT site</span>
+        <span class="book-meta">Select Class 9 → Science</span>
+        <span class="book-tag verified">✓ Official NCERT</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6m4-3h6v6m-11 5L21 3"/></svg> Open site</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Social Science — Understanding Society -->
+  <div class="subject-block" data-subject="social">
+    <div class="subject-header">
+      <div class="subject-icon" style="background:rgba(245,158,11,0.12);">🌍</div>
+      <div>
+        <div class="subject-name">Social Science <span class="new-badge">New</span></div>
+        <div class="subject-count">Understanding Society: India & Beyond · Integrated single book</div>
+      </div>
+    </div>
+    <div class="books-grid">
+      <a class="book-card" href="https://ncert.nic.in/textbook/pdf/iess1ps.pdf" target="_blank">
+        <span class="book-title">Understanding Society (English)</span>
+        <span class="book-meta">Direct PDF from NCERT</span>
+        <span class="book-tag">ncert.nic.in</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg> Open PDF</div>
+      </a>
+      <a class="book-card" href="https://ncert.nic.in/textbook/pdf/ihss1ps.pdf" target="_blank">
+        <span class="book-title">समाज को समझना (Hindi)</span>
+        <span class="book-meta">Direct PDF from NCERT</span>
+        <span class="book-tag">ncert.nic.in</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg> Open PDF</div>
+      </a>
+      <a class="book-card" href="https://ncert.nic.in/textbook.php" target="_blank">
+        <span class="book-title">All chapters on NCERT site</span>
+        <span class="book-meta">Select Class 9 → Social Science</span>
+        <span class="book-tag verified">✓ Official NCERT</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6m4-3h6v6m-11 5L21 3"/></svg> Open site</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- English — Kaveri -->
+  <div class="subject-block" data-subject="english">
+    <div class="subject-header">
+      <div class="subject-icon" style="background:rgba(59,130,246,0.12);">📖</div>
+      <div>
+        <div class="subject-name">English <span class="new-badge">New</span></div>
+        <div class="subject-count">Kaveri · 8 Prose + 8 Poetry · Replaces Beehive & Moments</div>
+      </div>
+    </div>
+    <div class="books-grid">
+      <a class="book-card" href="https://www.ncert.nic.in/textbook/pdf/iebe1ps.pdf" target="_blank">
+        <span class="book-title">Kaveri (Full Book)</span>
+        <span class="book-meta">Direct PDF from NCERT</span>
+        <span class="book-tag verified">✓ Verified link</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg> Open PDF</div>
+      </a>
+      <a class="book-card" href="https://ncert.nic.in/textbook.php" target="_blank">
+        <span class="book-title">All chapters on NCERT site</span>
+        <span class="book-meta">Select Class 9 → English</span>
+        <span class="book-tag verified">✓ Official NCERT</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6m4-3h6v6m-11 5L21 3"/></svg> Open site</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Hindi — Ganga -->
+  <div class="subject-block" data-subject="hindi">
+    <div class="subject-header">
+      <div class="subject-icon" style="background:rgba(239,68,68,0.12);">📚</div>
+      <div>
+        <div class="subject-name">Hindi <span class="new-badge">New</span></div>
+        <div class="subject-count">Ganga (गंगा) · New integrated textbook 2026–27</div>
+      </div>
+    </div>
+    <div class="books-grid">
+      <a class="book-card" href="https://ncert.nic.in/textbook/pdf/ihhl1ps.pdf" target="_blank">
+        <span class="book-title">गंगा — Ganga (Full Book)</span>
+        <span class="book-meta">Direct PDF from NCERT</span>
+        <span class="book-tag">ncert.nic.in</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg> Open PDF</div>
+      </a>
+      <a class="book-card" href="https://ncert.nic.in/textbook.php" target="_blank">
+        <span class="book-title">All chapters on NCERT site</span>
+        <span class="book-meta">Select Class 9 → Hindi</span>
+        <span class="book-tag verified">✓ Official NCERT</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6m4-3h6v6m-11 5L21 3"/></svg> Open site</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Sanskrit — Sharda -->
+  <div class="subject-block" data-subject="sanskrit">
+    <div class="subject-header">
+      <div class="subject-icon" style="background:rgba(168,85,247,0.12);">🕉️</div>
+      <div>
+        <div class="subject-name">Sanskrit <span class="new-badge">New</span></div>
+        <div class="subject-count">Sharda (शारदा) · Replaces Shemushi & Vyakaranavithi</div>
+      </div>
+    </div>
+    <div class="books-grid">
+      <a class="book-card" href="https://ncert.nic.in/textbook/pdf/iask1ps.pdf" target="_blank">
+        <span class="book-title">शारदा — Sharda (Full Book)</span>
+        <span class="book-meta">Direct PDF from NCERT</span>
+        <span class="book-tag">ncert.nic.in</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17"/></svg> Open PDF</div>
+      </a>
+      <a class="book-card" href="https://ncert.nic.in/textbook.php" target="_blank">
+        <span class="book-title">All chapters on NCERT site</span>
+        <span class="book-meta">Select Class 9 → Sanskrit</span>
+        <span class="book-tag verified">✓ Official NCERT</span>
+        <div class="download-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6m4-3h6v6m-11 5L21 3"/></svg> Open site</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="ncert-note">
+    All PDFs open directly from <a href="https://ncert.nic.in" target="_blank">ncert.nic.in</a> — the official NCERT server.<br>
+    If a direct link doesn't open, use the <a href="https://ncert.nic.in/textbook.php" target="_blank">NCERT e-books page</a> → select Class 9 → choose your subject.
+  </div>
+</main>
+
+<script>
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('.subject-block').forEach(b => {
+        b.style.display = (f === 'all' || b.dataset.subject === f) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>
